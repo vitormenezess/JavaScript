@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.box{
+    background: #bdbdbd;
+    border: 2px solid #333;
+    padding: 10px;
+
+}
+
+.container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
