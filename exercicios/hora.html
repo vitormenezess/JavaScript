@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hora do Dia</title>
+    <style>
+      body {
+        background: #ac5e06;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        color: white;
+      }
+      section {
+        background-color: white;
+        border-radius: 10px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.466);
+        color: black;
+        padding: 15px;
+        font-size: 1.3em;
+      }
+      section > div#msg {
+        margin: 20px;
+      }
+      div > img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+      }
+      footer > p {
+        color: white;
+      }
+      a{
+          text-decoration: none;
+          color: white;
+      }
+    </style>
+  </head>
+  <body onload="carregar()">
+    <header>
+      <h1>Hora do Dia</h1>
+    </header>
+    <section>
+      <div id="msg"></div>
+      <div id="foto">
+        <img id="imagem" src="imagens/manha.jpg" alt="barco" />
+      </div>
+    </section>
+    <footer>
+      <a href="https://github.com/vitormenezess" target="_blank">
+          <p>&copy; VitorMenezes</p>
+      </a>
+    </footer>
+    <script>
+      function carregar() {
+        var msg = document.getElementById("msg");
+        var img = document.getElementById("imagem");
+        var data = new Date();
+        var hora = data.getHours();
+
+        var min = data.getMinutes();
+        msg.innerHTML = `Agora são ${hora}:${min}.`;
+        
+        if (hora >= 0 && hora < 12) {
+          img.src = "imagens/manha.jpg";
+          document.body.style.background = '#E7B870'
+        } else if (hora >= 12 && hora <= 18) {
+          img.src = "imagens/tarde.jpg";
+          document.body.style.background = '#2F677C'
+        } else {
+          img.src = "imagens/noite.jpg";
+          document.body.style.background = '#2B273E'
+        }
+      }
+    </script>
+  </body>
+</html>
