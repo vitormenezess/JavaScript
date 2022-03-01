@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <style>
+        body{
+            background: rgb(82, 82, 145);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        header{
+            text-align: center;
+            color: white;
+        }
+        section{
+            text-align: left;
+            background: white;
+            width: 500px;
+            padding: 20px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px 1px black;
+        }
+        footer{
+            padding: 30px;
+        }
+        
+        a{
+            
+            text-decoration: none;
+            color: white;
+        }
+        .btn{
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.486);
+    
+        }
+        .btn:hover{
+            background-color:rgb(231, 228, 228);
+        }
+       
+    </style>
+</head>
+<body>
+    <header><h1>Vamos contar</h1></header>
+    <section>
+    <p>Início: <input type="number" name="txtinicio" id="txtinicio"></p>
+    <p>Fim: <input type="number" name="txtfim" id="txtfim"></p>
+    <p>Passo: <input type="number" name="txtpasso" id="txtpasso"></p>
+    <input class="btn" type="button" value="Contar" onclick="contar()">
+    <p>
+        <div id="resposta">Contagem....</div>
+    </p>
+    </section>
+    <footer><a href="https://github.com/vitormenezess" target="_blank">&copy VitorBarboasdeMenezes</a></footer>
+    
+    <script>
+        function contar(){
+        let inicio = document.querySelector('input#txtinicio')
+        let fim = document.querySelector('input#txtfim')
+        let passo = document.querySelector('input#txtpasso')
+        let res = document.querySelector('div#resposta')
+        
+
+        if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+            window.alert('[Erro] Faltam dados!')
+            
+        } else if(Number(passo.value == 0)){ 
+            alert('[Erro] Passo não pode ser 0')
+        
+        
+        }else{
+            if(Number(inicio.value) < Number(fim.value)) {
+                for (let index = Number(inicio.value); index <= Number(fim.value); index+=Number(passo.value)) {
+                res.innerHTML += `${index}  \u{1F449}`;
+                }}
+            else {
+                for (let index = Number(inicio.value); index >= Number(fim.value); index-=Number(passo.value)) {
+                res.innerHTML += `${index}  \u{1F449}`;}
+                
+            }
+            res.innerHTML += `\u{1F197}`
+       }
+    }    
+
+    </script>
+</body>
+</html>
