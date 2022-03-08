@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de aluno</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>College dos Peaky Blinders</h1></header>
+    <section>
+      <h2>Cadastro do aluno</h2>
+      <p>Nome: <input type="text" name="txtnome" id="txtnome" /></p>
+      <p>
+        sexo:
+        <input type="radio" name="txtsexo" id="m" checked />
+        <label for="m">Masculino</label>
+        <input type="radio" name="txtsexo" id="f" />
+        <label for="f">Feminino</label>
+      </p>
+      <p>
+        Data de Nascimento: <input type="date" name="txtdata" id="txtdata" />
+      </p>
+      <p>Cpf: <input type="number" name="txtcpf" id="txtcpf" /></p>
+      <p>Curso:
+          <select id="cursos">
+              <option value=""></option>
+              <option value="">Analise de Sistemas</option>
+              <option value="">Direito</option>
+              <option value="">Física</option>
+          </select>
+      </p>
+      <p><input class="btn" type="button" value="Cadastrar" onclick="cadastrar()" /></p>
+    </section>
+    <div id="resposta">Dados Cadastrados. . . .</div>
+    <footer>
+      <a href="https://github.com/vitormenezess" target="_blank"
+        >@ vitormenezes</a
+      >
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
