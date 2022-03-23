@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="principal">
     <div class="container">
       <div class="header">
         <h2>Criar uma Conta</h2>
@@ -42,17 +42,17 @@
 
         <div class="form-control">
           <label for="passoword">Senha</label>
-          <input type="text" id="passoword" placeholder="Digite sua senha..." />
+          <input type="password" id="password" placeholder="Digite sua senha..." />
           <i class="fas fa-exclamation-circle"></i>
           <i class="fas fa-check-circle"></i>
           <small>Mensagem de erro</small>
         </div>
 
         <div class="form-control">
-          <label for="passoword">Confirmação de Senha</label>
+          <label for="password-confirmation">Confirmação de Senha</label>
           <input
-            type="text"
-            id="passoword"
+            type="password"
+            id="password-confirmation"
             placeholder="Digite sua senha novamente..."
           />
           <i class="fas fa-exclamation-circle"></i>
@@ -66,5 +66,6 @@
       src="https://kit.fontawesome.com/71d95cd2fb.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
