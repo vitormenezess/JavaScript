@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de display</title>
+    <style>
+        div{
+            background-color: blanchedalmond;
+        }
+        .inline{
+            display: inline;
+            height: 100px;/*não funciona*/
+            width: 100px;/*não funciona*/
+        }
+        .block{
+            display: block;
+            margin-bottom: 5px;
+            width: 100px;
+            height: 100px;
+        }
+        .inline-block{
+            display: inline-block;
+            margin-bottom: 5px;
+            width: 100px;
+            height: 100px;
+        }
+        .none{
+            display: none;
+            margin-bottom: 5px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Inline</h1>
+    <div class="inline">box</div>
+    <div class="inline">box</div>
+    <div class="inline">box</div>
+    <hr/>
+    <h1>Display block</h1>
+    <div class="block">box</div>
+    <div class="block">box</div>
+    <div class="block">box</div>
+    <hr>
+    <h1>Display Inline-block</h1>
+    <div class="inline-block">box</div>
+    <div class="inline-block">box</div>
+    <div class="inline-block">box</div>
+    <hr>
+    <h1>Display None</h1>
+    <div class="none">box</div>
+    <div class="none">box</div>
+    <div class="none">box</div>
+    
+</body>
+</html>

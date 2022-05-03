@@ -1,0 +1,173 @@
+body{
+    background-color: rgb(184, 178, 178);
+
+}
+.circulo{
+    font-size: 30px;
+    border-radius: 50%;
+    color: white;
+    width: 80px;
+    height: 80px;
+    background-color: #4feaff;
+    border: 0;
+    transition: transform 300ms, background-color 300ms;
+    animation: pulse 500ms;
+    margin: 20px;
+}
+.circulo:hover{
+    cursor: pointer;
+    background-color:#7fffff;
+    transform: scale(1.05);
+}
+.circulo:active{
+    transform: scale(0.95);
+    animation: none;
+}  
+@keyframes pulse {
+    from{
+        box-shadow: #69bcff 0 0 0;
+    }
+    to{
+        box-shadow: #69fff380 0 0 22px;
+    }
+}
+.pulsar{
+    margin: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px 0;
+    border: 0;
+    background-color: rgb(180, 255, 41);
+    font-size: 1.5em;
+    transition: transform 300ms, background-color 300ms;
+    animation: pulse 500ms;
+}
+.pulsar:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: rgba(180, 255, 41, 0.808);
+}
+.pulsar:active{
+    animation: none;
+    transform: scale(0.90);
+}
+.fundo{
+    margin: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px 0;
+    border: 0;
+    background-color: #009c3d;
+    font-size: 1.5em;
+    transition: transform 300ms;
+}
+.fundo:hover{
+    background-color: rgba(0, 0, 0, 0);
+    color: #009c3d;
+    box-shadow: inset 0 0 0 3px #009c3d;
+    cursor: pointer;
+}
+.fundo:active{
+    background-color: #009c3d;
+    color: black;
+    transform: scale(0.85);
+
+}
+@keyframes bounce {
+    0%, 20%, 60%, 100%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40%{
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    80%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+
+    }
+    
+}
+
+.pular{
+    margin: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px 0;
+    border: 0;
+    background-color: #fffffffd;
+    font-size: 1.5em;
+}
+.pular:hover{
+    cursor: pointer;
+    animation: bounce 1s;
+}
+.skew{
+    margin: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #009c3d;
+    font-size: 1.5em;
+}
+.skew:hover{
+    cursor: pointer;
+    transform: skew(-10deg);
+}
+/*input*/
+.pwd{
+    display: inline-block;
+    background: #dbdbdb;
+    border-radius: 12px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    position: relative;
+}
+.pwd input{
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
+    color: #5358b9;
+}
+.pwd input:focus{
+    outline: none;
+}
+.pwd i {
+    font-size: 1.4em;
+    padding: 1em;
+    color: #dbdbdb;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.pwd .fa-eye,
+.pwd .fa-eye-slash{
+    cursor: pointer;
+    color: #5358b9;
+    width: 1.2em;
+}
+.pwd .fa-lock{
+    color: #5358b9; 
+}
+/*
+.pwd .overlay{
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    background: #dbdbdb;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
+}
+.pwd .overlaycover{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    right: 0;
+}
+.pwd >div:nth-child(2){
+    position: relative;
+}

@@ -32,8 +32,8 @@ function checkInputs() {
 
   if (passwordValue === "") {
     setErrorFor(password, "A senha é obrigatoria.");
-  } else if (passwordValue.length < 5) {
-    setErrorFor(password, "A senha precisa ter no mínimo 5 caracteres.");
+  } else if (passwordValue.length < 10) {
+    setErrorFor(password, "A senha precisa ter no mínimo 10 caracteres.");
   } else {
     setSuccessFor(password);
   }
@@ -51,7 +51,7 @@ function checkInputs() {
     return formControl.className === "form-control success";
   });
   if (formIsValid) {
-    window.location.replace("http://127.0.0.1:5500/pag02.html");
+    window.location.replace(pag02.html);
   }
 }
 function setErrorFor(input, message) {
